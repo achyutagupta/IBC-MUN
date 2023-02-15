@@ -5,29 +5,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="form.css">
     <title>MUN form</title>
 </head>
 
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form>
-            <div class="user-box">
-                <input type="text" name="" required="">
-                <label>Username</label>
+    <h1>MUN Registration</h1>
+    <div class="outer">
+       
+        <form class="main_f">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
             </div>
-            <div class="user-box">
-                <input type="password" name="" required="">
-                <label>Password</label>
+
+           
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input class="form-control" type="text" name="" required="" />
             </div>
-            <a href="#">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-            </a>
+            <div class="mb-3">
+                <label  class="form-label">Contact No.</label>
+                <input class="form-control" type="text" name="" required="" />
+            </div>
+            <div class="mb-3">
+                Choose Institute <br>
+                <input type="radio" id="html" name="fav_language" value="HTML" />
+                <label for="html" style="margin-right: 1em;">MANIT</label>
+                <input type="radio" id="css" name="fav_language" value="CSS" />
+                <label for="css" >Other</label><br />
+                <div class="mb-3">
+                    <label class="form-label">Institute Name if other</label>
+                    <input  class="form-control" type="text" name="other" required="" />
+                </div>
+            </div>
+            <div class="mb-3">
+                Select the councils you would be interested to be a part of? <br>
+                <input type="checkbox" name="vehicle1" value="Bike">
+                <label for="vehicle1"> ECOSOC : United Nations Economic and Social Committee</label><br>
+                <input type="checkbox" name="vehicle2" value="Car">
+                <label for="vehicle2"> SPECPOL : United Nations Special Political and Decolonization
+                    Committee</label><br>
+                <input type="checkbox" name="vehicle3" value="Boat">
+                <label for="vehicle3"> SOCHUM : United Nations Social, Humanitarian and Cultural Committee</label><br>
+                <input type="checkbox" name="vehicle4" value="Plane">
+                <label for="vehicle4"> DISEC : United Nations Disarmament and International Security
+                    Committee</label><br><br>
+            </div>
+            
+            <div class="mb-3">
+                <p>Benefits of participating: Certificate of Participation to all the participants.</p>
+                <img  class="form-control" src="#">
+            </div>
+            <div class="mb-3">
+                <p>Benefits of participating: Letter of Recommendation to exceptional participants from Intellect
+                    Browsers' Consortium, MANIT.</p>
+                <img class="form-control" src="#">
+            </div>
+            <div class="mb-3">
+                <p>Upload your MANIT ID Card for proof (.jpg or .pdf) Provisional ID Card, Admission Letter or Semester
+                    Fee receipt is also acceptable.</p>
+                <input  class="form-control" type="file" id="myFile" name="filename">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Branch</label>
+                <input class="form-control" type="text" name="" required="" />
+            </div>
+
+            <div class="mb-3">
+                Year <br>
+                <input type="radio" name="fav_language" value="1st" />
+                <label for="html">1st</label><br />
+                <input type="radio" name="fav_language" value="2nd" />
+                <label for="css">2nd</label><br />
+                <input type="radio" name="fav_language" value="3rd" />
+                <label for="css">3rd</label><br />
+                <input type="radio" name="fav_language" value="4th" />
+                <label for="css">4th</label><br />
+                <input type="radio" name="fav_language" value="CSS" />
+                <label for="css">5th</label><br />
+
+
+            </div>
+            <button type="submit" class="btn btn-primary" style="background-color: #14213d; width: 100%;">Submit</button>
         </form>
     </div>
 </body>

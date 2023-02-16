@@ -152,21 +152,14 @@
             </div>
         </div>
     </div>
-
-   
     <!-- <div class="outer"> -->
-
     <div class="container text-center main_f ">
-        <form></form>
-
-        <div class="row align-items-start">
-            <div class="col-lg-6">
+        <div class="">
+            <div class="">
                 <div class="mb-3">
                     <label for="InputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
                 </div>
-
-
                 <div class="mb-3">
                   <label class="form-label">Full Name</label>
                   <input class="form-control" type="text" name="" required="" />
@@ -176,28 +169,28 @@
                   <input class="form-control" type="text" name="" required="" />
               </div>
               <div class="mb-3">
-                  Choose Institute <br>
-                  <input type="radio" id="manit" name="" value="MANIT" />
-                  <label for="html" style="margin-right: 1em;">MANIT</label>
-                  <input type="radio" id="other" name="" value="Other" />
-                  <label for="css">Other</label><br />
-                  <div class="mb-3">
-                      <label class="form-label">Institute Name if other</label>
-                      <input class="form-control" type="text" name="other" required="" />
-                  </div>
+                <select class="form-select" id="college" aria-label="Default select example">
+                  <option selected>Select Your College</option>
+                  <option value="1">MANIT</option>
+                  <option value="2">Others</option>
+                </select>
               </div>
-
-              <div class="mb-3">
+              <div class="mb-3" id="manit_f">
                   <p>Upload your MANIT ID Card for proof (.jpg or .pdf) Provisional ID Card, Admission Letter or
                       Semester
                       Fee receipt is also acceptable.</p>
                   <input class="form-control" type="file" id="myFile" name="filename">
               </div>
-
+              <div class="mb-3" id="other_f">
+                <div class="mb-3">
+                  <label class="form-label">Institute Name if other</label>
+                  <input class="form-control" type="text" name="other" required="" />
+                </div>
+                  <p>Payment</p>
+                  <input class="form-control" type="file" id="myFile" name="filename">
+              </div>
             </div>
-
-            <div class="col-lg-6">
-
+            <div class="">
               <div class="mb-3">
                 Select the councils you would be interested to be a part of? <br>
                 <input type="checkbox" name="councils1" value="ECOSOC">
@@ -229,8 +222,6 @@
                 <label for="css">4th</label><br />
                 <input type="radio" name="" value="5th" />
                 <label for="css">5th</label><br />
-
-
             </div>
             </div>
         </div>
@@ -243,7 +234,7 @@
     <section id="footer">
       <div class="wrapper"></div>
       <footer class="footer-container">
-        <div class="footer-left">
+        <div class="">
           <span>
             <h1 class="heading">GET LATEST UPDATES</h1>
           </span>
@@ -262,7 +253,7 @@
             </div>
           </div>
         </div>
-        <div class="footer-right">
+        <div class="">
           <div class="content">
             <div class="address">
               <span>
@@ -312,7 +303,22 @@
     </section>
     <!-- ==== Footer End ==== -->
   </div>
+  
 
+
+  <script>
+    document.getElementById("college").addEventListener('change',(e)=>{
+      var val = document.getElementById("college").value;
+      if (val == 1){
+        document.getElementById('manit_f').classList.remove('d-none');
+        document.getElementById('other_f').classList.add('d-none');
+      }
+      if (val == 2){
+        document.getElementById('manit_f').classList.add('d-none');
+        document.getElementById('other_f').classList.remove('d-none');
+      }
+    })
+  </script>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <!-- GSAP -->

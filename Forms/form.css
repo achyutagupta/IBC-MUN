@@ -47,8 +47,16 @@
     margin-top     : 0.5rem;
     height         : 30px;
     width          : 15%;
-    border         : 1px solid rgb(32, 24, 24);
-    border-radius  : 6px;
+    border-radius  : 2px;
+
+    border          : 1px solid var(--main-color);
+    place-items     : center;
+    color           : var(--white);
+    font-size       : var(--sub-heading-size);
+    font-family     : "Saira Condensed", sans-serif;
+    color           : var(--white);
+    background-color: var(--secondary-color);
+    border          : none;
 }
 
 #upload_other_img {
@@ -57,9 +65,16 @@
     text-decoration: none;
     margin-top     : 0.5rem;
     height         : 30px;
-    width          : 120px;
-    border         : 1px solid rgb(32, 24, 24);
-    border-radius  : 6px;
+    width          : 15%;
+    border-radius  : 2px;
+    border          : 1px solid var(--main-color);
+    place-items     : center;
+    color           : var(--white);
+    font-size       : var(--sub-heading-size);
+    font-family     : "Saira Condensed", sans-serif;
+    color           : var(--white);
+    background-color: var(--secondary-color);
+    border          : none;
 }
 
 #uploadProgress_manit{
@@ -71,7 +86,7 @@
     /* background: #fdb541; */
 }
 #uploadProgress_other{
-    width: 100px;
+    width: 75%;
     height: 20px;
     margin-left: 0.8rem;
     margin-top: 0.5rem;
@@ -92,6 +107,18 @@
 }
 
 @media(max-width: 600px) {
+    #upload_other_img {
+        width: 55%;
+    }
+    #uploadProgress_other{
+        width: 35%;
+    }
+    #upload_manit_img {
+        width: 55%;
+    }
+    #uploadProgress_manit{
+        width: 35%;
+    }
     #qr_img {
         width      : 100%;
         height     : 100;

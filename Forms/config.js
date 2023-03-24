@@ -114,7 +114,7 @@ const uploadImage = (e) => {
     if (fileItem == '') {
         progress_manit.value = 0
         progress_other.value = 0
-        alert("please upload a valid image")
+        alert("Please upload a valid image.")
     }
 
     else if (fileItem != '') {
@@ -157,7 +157,7 @@ const uploadImage = (e) => {
             uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
                 console.log('File available at', downloadURL);
                 url_data = downloadURL
-                alert("image uploaded")
+                alert("Image uploaded")
             });
         })
     }
@@ -181,8 +181,10 @@ submitButton.addEventListener("click", (e) => {
     let yr = document.getElementById('year').value;
 
 
-    let experience_manit = document.getElementById('experience_manit').value
-    let referral = document.getElementById('referral').value
+    let experience_manit = document.getElementById('experience_manit').value;
+    let committee = document.getElementById('committee').value;
+    let referral = document.getElementById('referral').value;
+    let transaction_id = document.getElementById('transaction_id').value;
 
 
 
@@ -238,7 +240,7 @@ submitButton.addEventListener("click", (e) => {
     if (validateFullName(Fname) == false) {
 
         if (Fname == '') {
-            alert("please fill your name!")
+            alert("Please fill your name!")
         }
 
         else if (Fname != '') {
@@ -250,7 +252,7 @@ submitButton.addEventListener("click", (e) => {
     else if (Email(Em) == false) {
 
         if (Em == '') {
-            alert("please fill your Email!")
+            alert("Please fill your Email!")
         }
 
         else if (Em != '') {
@@ -262,7 +264,7 @@ submitButton.addEventListener("click", (e) => {
     else if (PhoneNumber(Ctn) == false) {
 
         if (Ctn == '') {
-            alert("please fill your contact details!")
+            alert("Please fill your contact details!")
         }
 
         else if (Ctn != '') {
@@ -278,20 +280,20 @@ submitButton.addEventListener("click", (e) => {
         if (cname == 'MANIT') {
 
 
-            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '') {
-                alert("please fill all the necessary feilds!")
+            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == ''&& committee == '') {
+                alert("Please fill all the necessary feilds!")
             }
 
             else if (Fname == '') {
-                alert("please fill your name")
+                alert("Please fill your name")
             }
 
             else if (Em == '') {
-                alert("please fill your e-mail")
+                alert("Please fill your e-mail")
             }
 
             else if (Ctn == '') {
-                alert("please fill you contact details!")
+                alert("Please fill you contact details!")
             }
 
             else if (yr == '') {
@@ -299,11 +301,15 @@ submitButton.addEventListener("click", (e) => {
             }
 
             else if (branch == '') {
-                alert("please select your branch")
+                alert("Please select your branch")
             }
 
             else if (experience_manit == '') {
-                alert("please fill the experience column")
+                alert("Please fill the experience column")
+            }
+
+            else if (committee == '') {
+                alert("Please fill the committee column")
             }
 
             else if (File_manit == '') {
@@ -312,14 +318,14 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" click on the upload button and please upload the valid payment Receipt!")
+                alert(" Click on the upload button and Please upload the valid payment Receipt!")
             }
 
             else if (flag == false) {
                 alert("Invalid Captcha. try Again!");
             }
 
-            else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && flag == true) {
+            else if (Em != '' && Fname != '' && Ctn != '' && File_manit != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && committee != '' && flag == true) {
 
 
 
@@ -333,7 +339,8 @@ submitButton.addEventListener("click", (e) => {
                     Image: url_data,
                     Branch: branch,
                     Year: yr,
-                    experience: experience_manit
+                    experience: experience_manit,
+                    committee: committee
 
 
 
@@ -352,43 +359,49 @@ submitButton.addEventListener("click", (e) => {
 
         else if (cname == 'other') {
 
-            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && Oth == '') {
-                alert("please fill all the necessary feilds!")
+            if (Em == '' && Fname == '' && Ctn == '' && File_manit == '' && branch == '' && yr == '' && experience_manit == '' && committee == '' && Oth == '') {
+                alert("Please fill all the necessary feilds!")
             }
 
             else if (Fname == '') {
-                alert("please fill your name")
+                alert("Please fill your name")
             }
 
 
             else if (Em == '') {
-                alert("please fill your e-mail")
+                alert("Please fill your e-mail")
             }
 
 
             else if (Ctn == '') {
-                alert("please fill you contact details!")
+                alert("Please fill you contact details!")
             }
 
             else if (yr == '') {
-                alert("fill your year")
+                alert("Fill your year")
             }
 
             else if (branch == '') {
-                alert("please select your branch")
+                alert("Please select your branch")
             }
 
             else if (experience_manit == '') {
-                alert("please fill the experience column")
+                alert("Please fill the experience column")
             }
 
+            else if (committee == '') {
+                alert("Please fill the committee column")
+            }
 
             else if (referral == '') {
-                alert("please fill the referral column!")
+                alert("Please fill the referral column!")
+            }
+            else if (transaction_id == '') {
+                alert("Please fill the transaction_id column!")
             }
 
             else if (Oth == '') {
-                alert("please fill your institute name")
+                alert("Please fill your institute name")
             }
 
             else if (File_other == '') {
@@ -397,16 +410,16 @@ submitButton.addEventListener("click", (e) => {
 
 
             else if (url_data == '') {
-                alert(" click on the upload button and please upload the valid payment Receipt!")
+                alert(" Click on the upload button and Please upload the valid payment Receipt!")
             }
 
             else if (flag == false) {
-                alert("Invalid Captcha. try Again!");
+                alert("Invalid Captcha. Try Again!");
             }
 
 
 
-            else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && referral != '' && Oth != '' && flag == true) {
+            else if (Em != '' && Fname != '' && Ctn != '' && File_other != '' && branch != '' && yr != '' && url_data != '' && experience_manit != '' && committee != '' && referral != '' &&  transaction_id != '' && Oth != '' && flag == true) {
 
                 db_other.doc().set({
 
@@ -418,7 +431,9 @@ submitButton.addEventListener("click", (e) => {
                     Branch: branch,
                     Year: yr,
                     experience: experience_manit,
-                    code: referral
+                    committee:committee,
+                    code: referral,
+                    transaction: transaction_id
                 }).then(() => {
                     alert("Registration Successful!")
                     frm.reset();
